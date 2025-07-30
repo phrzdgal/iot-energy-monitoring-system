@@ -63,14 +63,41 @@ The system is meant to measure real-time AC current using an SCT-013 current sen
 --- 
 
 ## Project Structure
+
+```plaintext
 iot-energy-monitoring-system/
 │
-├── esp32_firmware/        # Arduino C++ code for ESP32
-├── backend/               # FastAPI backend
-│   ├── models/            # Database models
-│   └── routes/            # API endpoints
-├── dashboard/             # React frontend
-└── docs/                  # Diagrams, notes, and setup guides
+├── esp32_firmware/           # Arduino C++ code for ESP32
+│   ├── src/                  # Main firmware source files
+│   ├── lib/                  # Custom libraries (if any)
+│   └── README.md             # Notes for firmware setup
+│
+├── backend/                  # FastAPI backend (runs on laptop or Raspberry Pi)
+│   ├── app/                  
+│   │   ├── main.py           # FastAPI entrypoint
+│   │   ├── routes/           # API endpoints (e.g. /api/data)
+│   │   └── models/           # Database models (SQLAlchemy)
+│   ├── requirements.txt      # Python dependencies
+│   └── README.md             # Backend setup instructions
+│
+├── database/                 # PostgreSQL database configs
+│   ├── init.sql              # Schema initialization
+│   └── migrations/           # Future schema updates
+│
+├── dashboard/                # React frontend
+│   ├── src/                  # React components
+│   │   ├── components/       # Reusable UI components
+│   │   └── pages/            # Dashboard pages
+│   ├── package.json          # Frontend dependencies
+│   └── README.md             # Dashboard setup instructions
+│
+├── docs/                     # Documentation & diagrams
+│   ├── architecture.png      # System architecture diagram
+│   ├── setup.md              # Step-by-step setup guide
+│   └── demo.md               # Instructions for demo video/screenshots
+│
+└── README.md                 # Main project overview (this file)
+```
 
 --- 
 
