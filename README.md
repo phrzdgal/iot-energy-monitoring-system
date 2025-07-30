@@ -1,1 +1,38 @@
-# iot-energy-monitoring-system
+# IoT Energy Monitoring System
+
+## Project Overview
+The **IoT Energy Monitoring System** is a full-stack project designed to measure, transmit, and visualize household or small-scale energy usage in real time.  
+
+Using an **ESP32 microcontroller** and a **non-invasive current sensor (SCT-013)**, the system captures electricity consumption data, sends it wirelessly to a backend server, stores it in a database, and visualizes it through a web dashboard.  
+
+This project demonstrates skills in **embedded C++**, **IoT protocols**, **backend APIs**, **databases**, and **frontend dashboards** — bridging software and hardware for energy technology applications.  
+
+---
+
+## System Architecture
+```plaintext
+[SCT-013 Current Sensor]
+           │
+           ▼
+       [ESP32 MCU] ---- WiFi (MQTT/HTTP) ----> [FastAPI Backend + PostgreSQL]
+                                                   │
+                                                   ▼
+                                          [React Dashboard]
+```
+---
+
+## Specifications
+The system is meant to measure real-time AC current using an SCT-013 current sensor with ESP32. It calculates power (Watts) and energy consumption (kWh), tasmits readings from ESP32 to a backend server via MQTT/HTTp, stores sensor data in PostgreSQL with timestamps, and provides visualizations to live and historical energy usage on a React dashboard. In the near future, the system should have the added capability of sending alerts when power usage exceeds a designated threshold. 
+
+--- 
+
+## Skills
+- Embedded Systems: Writing firmware in C++ for ESP32, using ADC.
+- IoT Communication: Implementing MQTT/HTTP for device-to-server data transfer.
+- Backend Development: Designing FastAPI endpoints, handling JSON, SQLAlchemy integration.
+- Databases: Managing time-series energy data in PostgreSQL.
+- Frontend Development: React dashboard with real-time charts.
+- Systems Integration: Debugging across hardware, networking, and software layers.
+- Energy Domain Knowledge: Basics of current measurement, power calculation, and energy analytics. 
+
+
