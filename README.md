@@ -25,10 +25,11 @@ This project demonstrates skills in **embedded C++**, **IoT protocols**, **backe
 [SCT-013 Current Sensor] 
           │
           ▼
-       [ESP32 MCU] ----WiFi----> [FastAPI Backend (Laptop/Cloud)]
-                                         │
-                                         ▼
-                                 [PostgreSQL + React Dashboard]
+       [ESP32 MCU] ----WiFi/MQTT----> [Raspberry Pi Hub]
+                                            │
+                        ┌───────────────────┴────────────────────┐
+                        │                                        │
+                [FastAPI Backend + PostgreSQL]          [React Dashboard Server]
 ```
 
 ---
