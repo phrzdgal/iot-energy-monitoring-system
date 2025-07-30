@@ -21,8 +21,36 @@ This project demonstrates skills in **embedded C++**, **IoT protocols**, **backe
 ```
 ---
 
-## Specifications
+## Specifications & Features
 The system is meant to measure real-time AC current using an SCT-013 current sensor with ESP32. It calculates power (Watts) and energy consumption (kWh), tasmits readings from ESP32 to a backend server via MQTT/HTTp, stores sensor data in PostgreSQL with timestamps, and provides visualizations to live and historical energy usage on a React dashboard. In the near future, the system should have the added capability of sending alerts when power usage exceeds a designated threshold. 
+
+### Core Delivarables: 
+1. ESP32 Firmware
+   - Reads current using a SCT-013 sensor.
+   - Calculates power usage in real-time.
+   - Sends readings to backend in JSON format.
+2. FastAPI Backend
+   - Endpoint /api/data receives ESP32 readings.
+   - Stores readings in PostgreSQL with timestamps.
+   - Endpoint /api/usage povides usage history. 
+3. PostgreSQL Database
+   - Stores time-series data: timestamp, current, power, kWh.
+4. React Dashboard
+   - Displays real-time power usage.
+   - Provides daily/weekly/monthly summaries.
+   - Interactive charts using Recharts or Chart.js
+
+--- 
+
+## Project Structure
+iot-energy-monitoring-system/
+│
+├── esp32_firmware/        # Arduino C++ code for ESP32
+├── backend/               # FastAPI backend
+│   ├── models/            # Database models
+│   └── routes/            # API endpoints
+├── dashboard/             # React frontend
+└── docs/                  # Diagrams, notes, and setup guides
 
 --- 
 
