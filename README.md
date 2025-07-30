@@ -19,6 +19,18 @@ This project demonstrates skills in **embedded C++**, **IoT protocols**, **backe
                                                    ▼
                                           [React Dashboard]
 ```
+
+### System Architecure Version II -- Utilizing Raspberry Pi
+```plaintext
+[SCT-013 Current Sensor] 
+          │
+          ▼
+       [ESP32 MCU] ----WiFi----> [FastAPI Backend (Laptop/Cloud)]
+                                         │
+                                         ▼
+                                 [PostgreSQL + React Dashboard]
+```
+
 ---
 
 ## Specifications & Features
@@ -39,6 +51,13 @@ The system is meant to measure real-time AC current using an SCT-013 current sen
    - Displays real-time power usage.
    - Provides daily/weekly/monthly summaries.
    - Interactive charts using Recharts or Chart.js
+5. (Future) Raspberry Pi
+   - Linux System Administration
+   - Local Server Hosting
+   - MQTT Broker & Edge IoT Networking
+   - Edge Computing Concepts
+   - Ful-Stack Deployment Skills
+   - Hardware Interfacing Beyond ESP32
 
 --- 
 
@@ -61,6 +80,7 @@ iot-energy-monitoring-system/
 - Databases: Managing time-series energy data in PostgreSQL.
 - Frontend Development: React dashboard with real-time charts.
 - Systems Integration: Debugging across hardware, networking, and software layers.
-- Energy Domain Knowledge: Basics of current measurement, power calculation, and energy analytics. 
+- Energy Domain Knowledge: Basics of current measurement, power calculation, and energy analytics.
+- (Future) Raspberry Pi Setup: Linux system administration; Local FastAPI server; MQTT broker coordinating many ESP32 nodes; Offline-capable dashboard; Deployable product for field/humanitarian use 
 
 
